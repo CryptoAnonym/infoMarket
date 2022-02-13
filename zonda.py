@@ -22,11 +22,11 @@ if daneZonda.ok == True:
         print("\n***** Witaj w wyszukiwarce rynków na giełdzie ZONDA! *****")
         print("        (Rynek wyszukujemy wg schematu: BTC-PLN)     ")
         
-        dane = input("\nPodaj rynek, którego szukasz: ")
+        in_data = input("\nPodaj rynek, którego szukasz: ")
 
-        if len(dane) == 7:
-            if dane.find("-") != -1:
-                zonda(dane.upper())
+        if len(in_data) == 7:
+            if in_data.find("-") != -1:
+                zonda(in_data.upper())
             else :
                 print("Błędny rynek!")
         else :
