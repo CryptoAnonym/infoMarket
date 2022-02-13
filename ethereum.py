@@ -1,13 +1,19 @@
 from web3 import Web3
+from web3.eth import Eth
 
 infura= "https://mainnet.infura.io/v3/2c6b6d6fcb964eee88bc0e2e83c8f654"
 web3 = Web3(Web3.HTTPProvider(infura))
+
 nr_bloku = web3.eth.block_number 
+gas = web3.eth.gas_price
+gwei = gas / 1000000000
+
 
 def eth():
 
     print("\n***** Witaj w przeglądarce sieci ETHEREUM *****")
-    print("***** Aktualny nr bloku Ethereum: " + str(nr_bloku) +" *****")
+    print(" Aktualny nr bloku Ethereum: " + str(nr_bloku) +" *****")
+    print(" Aktualna cena gazu: " + str(round(gwei, 2)) + " Gwei")
 
     def eth_balans(wallet):  
 
@@ -15,7 +21,31 @@ def eth():
         b_wallet = web3.fromWei(balance, "ether")
 
         print("\nAdres posiada: " + str(b_wallet) + " ETH \n" )
+    
+    def transacion(hash):                               #wyszukiwarka transakcji
+        tx = web3.eth.get_transaction(hash)
 
-    in_data = input("\nWpisz adres na sieci ETHEREUM: ")
+        from_eth = tx["from"]
+        to_eth = tx["to"]
+        blockNumber = tx["blockNumber"]
+        gas_price = tx["gasPrice"] / 1000000000
+        value = tx["value"] / 1000000000000000000
 
-    eth_balans(in_data)
+        print("From: " + str(from_eth))
+        print("To: " + str(to_eth))
+        print("Block number: " + str(blockNumber))
+        print("Gas price: " + str(gas_price) + " Gwei")
+        print("Value: " + str(value) + " ETH")
+
+    in_data = input("\nWpisz adres ETH lub hash transakcji: ")
+
+    l_znakow = len(in_data)
+    print(l_znakow)
+
+    if l_znakow == 42:
+        eth_balans(in_data)
+    if l_znakow == 66:
+        transacion(in_data)
+
+    
+

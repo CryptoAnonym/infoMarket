@@ -1,4 +1,3 @@
-from msilib.schema import Error
 import requests
 
 daneZonda = requests.get("https://api.zonda.exchange/rest/trading/ticker")
