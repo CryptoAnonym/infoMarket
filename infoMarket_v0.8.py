@@ -3,6 +3,7 @@ from info import global_info
 from zonda import exchange
 from nbp import nbp
 from ethereum import eth
+from paprika import paprika
 
 
 while True:
@@ -12,7 +13,7 @@ while True:
 
   print("""
     info - ogólne informacje o rynku
-    paprica - informacje o krypto z serwisu coinpaprica
+    paprika - informacje o krypto z serwisu coinpaprica
     zonda - wyszukiwarka rynków na giełdzie ZONDA
     nbp - kursy walut z Narodowego Banku Polskiego
     eth - przegląd sieci Ethereum
@@ -28,6 +29,8 @@ while True:
     nbp()
   if action.upper() == "ETH":
     eth()
+  if action.upper() == "PAPRIKA":
+    paprika()
 
 
   input("\nEnter aby kontynuować")

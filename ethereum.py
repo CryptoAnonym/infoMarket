@@ -40,7 +40,6 @@ def eth():
     in_data = input("\nWpisz adres ETH lub hash transakcji: ")
 
     l_znakow = len(in_data)
-    print(l_znakow)
 
     if l_znakow == 42:
         eth_balans(in_data)
