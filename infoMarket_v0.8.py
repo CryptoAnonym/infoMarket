@@ -1,3 +1,4 @@
+from asyncore import ExitNow
 import time
 from info import global_info
 from zonda import exchange
@@ -21,6 +22,7 @@ while True:
 
   action = input("Action: ")
 
+
   if action.upper() == "ZONDA":
     exchange()
   if action.upper() == "INFO":
@@ -31,6 +33,10 @@ while True:
     eth()
   if action.upper() == "PAPRIKA":
     paprika()
+  if action.upper() == "EXIT":
+    quit
+    break
+    
 
 
   input("\nEnter aby kontynuować")

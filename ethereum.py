@@ -12,7 +12,7 @@ gwei = gas / 1000000000
 def eth():
 
     print("\n***** Witaj w przeglądarce sieci ETHEREUM *****")
-    print(" Aktualny nr bloku Ethereum: " + str(nr_bloku) +" *****")
+    print(" **** Aktualny nr bloku Ethereum: " + str(nr_bloku) +" ****")
     print(" Aktualna cena gazu: " + str(round(gwei, 2)) + " Gwei")
 
     def eth_balans(wallet):  
