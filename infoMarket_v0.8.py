@@ -18,7 +18,10 @@ while True:
     zonda - wyszukiwarka rynków na giełdzie ZONDA
     nbp - kursy walut z Narodowego Banku Polskiego
     eth - przegląd sieci Ethereum
-  """)
+    exit - wyjscie
+
+    """)
+
 
   action = input("Action: ")
 
@@ -34,7 +37,6 @@ while True:
   if action.upper() == "PAPRIKA":
     paprika()
   if action.upper() == "EXIT":
-    quit
     break
     
 
