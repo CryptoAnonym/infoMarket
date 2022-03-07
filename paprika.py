@@ -8,7 +8,7 @@ if crypto.ok == True:
     def paprika():
 
         print("\n***** DANE KRYPTOWALUT Z COINPAPRIKA.COM *****")
-        print("***** Wyszukiwanie po nazwie lub tikerze *****")
+        print("***** Wyszukiwanie tikerze (np. btc) *****")
         print("")
         in_data = input("Jakiej waluty szukasz: ")
         def papricaAll(crypt):          # wyszukiwarka coinpaprica
