@@ -1,5 +1,6 @@
 from web3 import Web3
 from web3.eth import Eth
+from paprika import paprica_price
 
 infura= "https://mainnet.infura.io/v3/2c6b6d6fcb964eee88bc0e2e83c8f654"
 web3 = Web3(Web3.HTTPProvider(infura))
@@ -11,8 +12,10 @@ gwei = gas / 1000000000
 def eth():
 
     print("\n***** Witaj w przeglądarce sieci ETHEREUM *****")
-    print(" **** Aktualny nr bloku Ethereum: " + str(nr_bloku) +" ****")
-    print(" Aktualna cena gazu: " + str(round(gwei, 2)) + " Gwei")
+    print(" **** Aktualny nr bloku Ethereum: " + str(nr_bloku) +" ****\n")
+    paprica_price("ETH")
+    print(" Aktualna cena gazu: " + str(round(gwei, 2)) + " Gwei\n")
+
 
     def eth_balans(wallet):  
 

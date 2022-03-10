@@ -31,14 +31,26 @@ if odpNBP.ok == True:
                     print("|"+ tiker + "|" + waluta.upper() + "= "+ str(price4)+ " " + "|PLN|" )
             else:
                 for rate in rates:
-                        waluta = rate["currency"]
-                        tiker = rate["code"]
-                        price4 = rate["mid"]
-                        if tiker == in_data.upper() :
-                            print("\n|"+ tiker + "|" + waluta.upper() + "= "+ str(price4)+ " " + "|PLN|" )
-                        else: 
-                            continue
+                    waluta = rate["currency"]
+                    tiker = rate["code"]
+                    price4 = rate["mid"]
+                    if tiker == in_data.upper() :
+                        print("\n|"+ tiker + "|" + waluta.upper() + "= "+ str(price4)+ " " + "|PLN|" )
+                    else: 
+                        continue
+
             input("\nEnter, aby kontynuowac.")
             nbp()
 else:
     print("Connect with NBP API ERROR!")
+
+
+def forex_price(x):
+    rates = data["rates"]
+    for rate in rates:
+        tiker = rate["code"]
+        price4 = rate["mid"]
+        if tiker == x:
+            return price4
+
+

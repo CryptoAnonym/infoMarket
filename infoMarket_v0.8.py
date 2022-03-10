@@ -2,9 +2,9 @@
 import time
 from info import global_info
 from zonda import exchange
-from nbp import nbp
+from nbp import nbp, forex_price
 from ethereum import eth
-from paprika import paprika
+from paprika import paprika, paprica_price
 
 
 while True:
@@ -22,6 +22,8 @@ while True:
 
     """)
 
+  paprica_price("BTC")
+  print("|USD| Dolar Amerykański = " +str(forex_price("USD")) + " |PLN|\n")
 
   action = input("Action: ")
 
