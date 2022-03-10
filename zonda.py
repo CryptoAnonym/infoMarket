@@ -7,7 +7,7 @@ if daneZonda.ok == True:
 
     def exchange():
         def zonda(rynek): # wyszukiwarka rynków w zondzie(bitbay)  
-                     
+            if rynek in dane3:         
                 test = dane3[rynek]
 
                 bid = test["highestBid"]
@@ -16,7 +16,8 @@ if daneZonda.ok == True:
             
                 print("\nNajwyzsza oferta kupna: " + str(bid)[0:6] + " " + str(rynek)[4:7] )
                 print("Najnizsza oferta sprzedazy: " + str(ask)[0:6] + " "+ str(rynek)[4:7] + "\n")
-            
+            else:
+                print("\nBrak rynku! Sproboj jeszcze raz.")
 
         print("\n***** Witaj w wyszukiwarce rynkow na gieldzie ZONDA! *****")
         print("        (Rynek wyszukujemy wg schematu: BTC-PLN)     ")
@@ -33,10 +34,8 @@ if daneZonda.ok == True:
 
                 else :
                     print("\nBledny rynek! Sproboj jeszcze raz.")
-                    input("\nEnter, aby kontynuowac.")
             else :
                 print("\nBledny rynek! Sproboj jeszcze raz.")
-                input("\nEnter, aby kontynuowac.")
             
             input("\nEnter, aby kontynuowac.")
             exchange()
