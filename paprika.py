@@ -1,3 +1,4 @@
+from tkinter import END
 import requests
 
 crypto = requests.get("https://api.coinpaprika.com/v1/tickers")
@@ -8,9 +9,10 @@ if crypto.ok == True:
     def paprika():
 
         print("\n***** DANE KRYPTOWALUT Z COINPAPRIKA.COM *****")
-        print("***** Wyszukiwanie tikerze (np. btc) *****")
+        print("***** Wyszukiwanie tikerze (np. BTC) *****")
         print("")
-        in_data = input("Jakiej waluty szukasz: ")
+        in_data = input("Wpisz tiker waluty (MENU - aby wrocic): ")
+        
         def papricaAll(crypt):          # wyszukiwarka coinpaprica
             i = 0
             while i <= 100:
@@ -38,9 +40,9 @@ if crypto.ok == True:
                     change30 = cos2["percent_change_30d"]
                     changeY = cos2["percent_change_1y"]
 
-                    if tiker == str(crypt)  or name == str(crypt) :
-                        crypt = print("|"+ tiker + "|" + " "+ name + " = "+ str(price)[0:8] +" " + "|USD|")
-                        print("Aktualizacja: "+ str(akk[0:10]) + " " + str(akk[11:19]) + "\nRanking nr: " + str(rank) +  "\n Zmiana ceny w ostatnim czasie: ")
+                    if tiker == str(crypt): # or name == str(crypt) :
+                        crypt = print("\n|"+ tiker + "|" + " "+ name + " = "+ str(price)[0:8] +" " + "|USD|")
+                        print("\nAktualizacja: "+ str(akk[0:10]) + " " + str(akk[11:19]) + "\nRanking nr: " + str(rank) +  "\n Zmiana ceny w ostatnim czasie: ")
                         print(" * 1h: " + str(change1) + " %" +  "\n * 24h: " + str(change24)+ " %"  + "\n * 7d: " + str(change7) 
                             + " %" + "\n * 30d: " + str(change30)+ " %"+ "\n * 1y: " + str(changeY)+ " %" )
                         print("Market: " + str(mCapTiker)[0:5] + " MLD USD" + "\nATH: " + str(ath_price)[0:6] + " USD" + "\n ATH data: " + ath_date[0:10] + "\n Od ATH: " + str(percent_from_price_ath) + " %" )
@@ -48,4 +50,19 @@ if crypto.ok == True:
 
                         print("Maxymalna podaż: " + str(maxSuplay) + "\n 0 = Nieskończona")
                         break
-        papricaAll(in_data.upper())
+                else:
+                    break
+        
+        if in_data.upper() == "MENU":
+            pass
+        if in_data.upper() != "MENU":
+            papricaAll(in_data.upper())
+            input("\nEnter, aby kontynuowac.")
+            paprika()
+
+else:
+    print("Connect with COINPAPRIKA API ERROR!")
+            
+
+
+

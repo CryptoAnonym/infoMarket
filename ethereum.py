@@ -8,7 +8,6 @@ nr_bloku = web3.eth.block_number
 gas = web3.eth.gas_price
 gwei = gas / 1000000000
 
-
 def eth():
 
     print("\n***** Witaj w przeglądarce sieci ETHEREUM *****")
@@ -20,7 +19,7 @@ def eth():
         balance = web3.eth.get_balance(wallet)          #wyszukiwarka adresu
         b_wallet = web3.fromWei(balance, "ether")
 
-        print("\nAdres posiada: " + str(b_wallet) + " ETH \n" )
+        print("\nAdres posiada: " + str(b_wallet) + " ETH" )
     
     def transacion(hash):                               #wyszukiwarka transakcji
         tx = web3.eth.get_transaction(hash)
@@ -31,7 +30,7 @@ def eth():
         gas_price = tx["gasPrice"] / 1000000000
         value = tx["value"] / 1000000000000000000
 
-        print("From: " + str(from_eth))
+        print("\nFrom: " + str(from_eth))
         print("To: " + str(to_eth))
         print("Block number: " + str(blockNumber))
         print("Gas price: " + str(gas_price) + " Gwei")
@@ -41,10 +40,18 @@ def eth():
 
     l_znakow = len(in_data)
 
-    if l_znakow == 42:
-        eth_balans(in_data)
-    if l_znakow == 66:
-        transacion(in_data)
+    if in_data.upper() == "MENU":
+        pass
 
+    if in_data.upper() != "MENU":
+        if l_znakow == 42:
+            eth_balans(in_data)
+        elif l_znakow == 66:
+            transacion(in_data)
+        else:
+            print("\nBledna ilosc znakow. Sproboj jeszcze raz.")
+        
+        input("\nEnter aby kontynuowac.")
+        eth()
     
 

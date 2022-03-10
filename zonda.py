@@ -14,22 +14,32 @@ if daneZonda.ok == True:
                 ask = test["lowestAsk"]
             
             
-                print("\nNajwyższa oferta kupna: " + str(bid)[0:6] + " " + str(rynek)[4:7] )
-                print("Najniższa oferta sprzedaży: " + str(ask)[0:6] + " "+ str(rynek)[4:7] + "\n")
+                print("\nNajwyzsza oferta kupna: " + str(bid)[0:6] + " " + str(rynek)[4:7] )
+                print("Najnizsza oferta sprzedazy: " + str(ask)[0:6] + " "+ str(rynek)[4:7] + "\n")
             
 
-        print("\n***** Witaj w wyszukiwarce rynków na giełdzie ZONDA! *****")
+        print("\n***** Witaj w wyszukiwarce rynkow na gieldzie ZONDA! *****")
         print("        (Rynek wyszukujemy wg schematu: BTC-PLN)     ")
         
-        in_data = input("\nPodaj rynek, którego szukasz: ")
+        in_data = input("\nPodaj rynek, ktorego szukasz (MENU - aby wrocic): ")
 
-        if len(in_data) == 7:
-            if in_data.find("-") != -1:
-                zonda(in_data.upper())
+        if in_data.upper() == "MENU":
+            pass
+
+        if in_data.upper() != "MENU":
+            if len(in_data) == 7:
+                if in_data.find("-") != -1:
+                    zonda(in_data.upper())
+
+                else :
+                    print("\nBledny rynek! Sproboj jeszcze raz.")
+                    input("\nEnter, aby kontynuowac.")
             else :
-                print("Błędny rynek!")
-        else :
-            print("Błędny rynek!")
+                print("\nBledny rynek! Sproboj jeszcze raz.")
+                input("\nEnter, aby kontynuowac.")
+            
+            input("\nEnter, aby kontynuowac.")
+            exchange()
 
 else:
     print("Connect with Zonda API ERROR!")
