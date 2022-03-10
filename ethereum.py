@@ -11,9 +11,10 @@ gwei = gas / 1000000000
 
 def eth():
 
+    eth_price = paprica_price("ETH")
     print("\n***** Witaj w przeglądarce sieci ETHEREUM *****")
     print(" **** Aktualny nr bloku Ethereum: " + str(nr_bloku) +" ****\n")
-    paprica_price("ETH")
+    print(" Aktualna cena ETH: " + str(eth_price)[0:7] + " |USD|")
     print(" Aktualna cena gazu: " + str(round(gwei, 2)) + " Gwei\n")
 
 

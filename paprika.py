@@ -68,7 +68,7 @@ if crypto.ok == True:
 else:
     print("Connect with COINPAPRIKA API ERROR!")
     
-def paprica_price(crypt):          # wyszukiwarka coinpaprica
+def paprica_price_print(crypt):          # wyszukiwarka coinpaprica
             i = 0
             while i <= 100:
                 if i < 100:
@@ -103,5 +103,40 @@ def paprica_price(crypt):          # wyszukiwarka coinpaprica
                         #print("|"+ tiker + "|" + " "+ name + " = "+ str(pln)[0:8] +  " |PLN|")
                         break
 
+def paprica_price(crypt):          # wyszukiwarka coinpaprica
+            i = 0
+            while i <= 100:
+                if i < 100:
+                    z = data[i]
+                    name = z["name"]
+                    tiker = z["symbol"]
+                    i += 1 
+                    cos = z["quotes"]
+                    cos2 = cos["USD"]
+                    price = cos2["price"]
 
+                    if tiker == str(crypt): # or name == str(crypt) :
+                        usd_price = forex_price("USD")
+                        pln = usd_price * price
 
+                        return price
+                        break
+
+def paprica_price_pln(crypt):          # wyszukiwarka coinpaprica
+            i = 0
+            while i <= 100:
+                if i < 100:
+                    z = data[i]
+                    name = z["name"]
+                    tiker = z["symbol"]
+                    i += 1 
+                    cos = z["quotes"]
+                    cos2 = cos["USD"]
+                    price = cos2["price"]
+
+                    if tiker == str(crypt): # or name == str(crypt) :
+                        usd_price = forex_price("USD")
+                        pln = usd_price * price
+
+                        return pln
+                        break

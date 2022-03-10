@@ -8,6 +8,7 @@ Application in first versions:
 - browse the markets on the ZONDA exchange
 - view exchange rates according to the National Bank of Poland
 - browse the ethereum blockchain 
+- calculator KRYPTO-FIAT
 
 Python needs package REQUESTS and WEB3 (pip install requests, pip install web3)
 You need to download all files. 
@@ -21,6 +22,7 @@ Aplikacja w pierwszych wersjach ma:
 - przeglądać rynki na giełdzie ZONDA
 - przeglądać kursy walut w/g NBP
 - przeglądać blockchain Ethereum
+- kalkulator KRYPTO-FIAT
 
 Python potrzebuje pakietu REQUESTS i WEB3 (pip install requests, pip install web3)
 Musisz pobrać wszystkie pliki.
