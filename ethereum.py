@@ -40,7 +40,7 @@ def eth():
         print("Gas price: " + str(gas_price) + " Gwei")
         print("Value: " + str(value) + " ETH")
 
-    in_data = input("\nWpisz adres ETH lub hash transakcji: ")
+    in_data = input("\nWpisz adres ETH lub hash transakcji (MENU - aby wrocic): ")
 
     l_znakow = len(in_data)
 
