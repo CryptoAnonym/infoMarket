@@ -19,7 +19,7 @@ while True:
     zonda - wyszukiwarka rynkow na gieldzie ZONDA
     nbp - kursy walut z Narodowego Banku Polskiego
     eth - przeglad sieci Ethereum
-    cal - kalkulator wymian krypto-fiat
+    cal - kalkulator wymian (krypto-fiat, krypto-krypto, fiat-fiat)
     exit - wyjscie
 
     """)

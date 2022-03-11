@@ -86,7 +86,18 @@ def cal():
                 input("\nEnter aby kontynuowac.")          
         
         elif action == "4":
-                pass
+            krypto3 = input("Podaj kryptowalute (np. BTC) do zamiany: ")
+            krypto_price1 = paprica_price_pln(krypto3.upper())
+            krypto4 = input("Podaj na jaka kryptowalute (np. ETH) zamieniamy: ")
+            krypto_price2 = paprica_price_pln(krypto4.upper())
+            ile = input("Ile " + krypto3.upper() + " wymieniamy na " + krypto4.upper() + ": ")
+        
+            dzialanie = float(krypto_price1) / float(krypto_price2) 
+            wynik = float(ile) * dzialanie
+
+            print("Otrzymasz: " + str(wynik)[0:8] + " " + str(krypto4.upper()) )
+            input("\nEnter aby kontynuowac.")   
+
         else: 
             print("\n Bledny wybor. Sproboj jeszcze raz.")
         
