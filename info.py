@@ -23,7 +23,8 @@ if globale.ok == True:
         print(" Zmiana od ATH mCap:  " + str(-rATH)[0:5]+ " BLN USD " + str(procentodATH)[0:5] + " %")
         print(" Volumen mCap 24h:  " + str(volume24)[0:5]+ " MLD USD")
         print(" Dominacja BTC:  " + str(btcd)+ " %")
-
+        input("\nEnter aby kontynuowac.")
 
 else:
-    print("Connect with papricacoin/global API ERROR!")
+    print("Connect with papricacoin/global API ERROR!") 
+    input("\nEnter aby kontynuowac.")

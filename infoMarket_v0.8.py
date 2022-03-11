@@ -46,6 +46,3 @@ while True:
   else:
     print("\nERROR! Bledna komenda. Sproboj jeszcze raz. ")
     
-
-
-  input("\nEnter, aby kontynuowac.")
