@@ -55,7 +55,7 @@ def eth():
         else:
             print("\nBledna ilosc znakow. Sproboj jeszcze raz.")
         
-        input("\nEnter aby kontynuowac.")
+        input("\nEnter, aby kontynuowac.")
         eth()
     
 
