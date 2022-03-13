@@ -1,4 +1,4 @@
-# infoMarket
+# infoMarket (upgrade 13.03.2022r)
 Quick view of crypto markets.
 
 [EN]
@@ -9,8 +9,10 @@ The Application can:
 - view exchange rates according to the National Bank of Poland
 - browse the ethereum blockchain 
 - calculator KRYPTO-FIAT, KRYPTO-KRYPTO, FIAT-FIAT
+- current metal prices (1oz bullion coins) 
 
-Python needs package REQUESTS and WEB3 (pip install requests, pip install web3)
+Needs packages:
+REQUESTS, WEB3, SELENIUM (pip install "name package")
 You need to download all files. 
 
 InfoMarket-Windows.rar - separate program, no other files required - compilation windows (tkinter)
@@ -23,8 +25,10 @@ Aplikacja potrafi:
 - przeglądać kursy walut w/g NBP
 - przeglądać blockchain Ethereum
 - kalkulator KRYPTO-FIAT, KRYPTO-KRYPTO, FIAT-FIAT
+- aktualne ceny metali szlachetnych (monety bulionowe 1oz)
 
-Python potrzebuje pakietu REQUESTS i WEB3 (pip install requests, pip install web3)
+Potrzebne pakiety:
+REQUESTS, WEB3, SELENIUM (pip install "nazwa pakietu")
 Musisz pobrać wszystkie pliki.
 
 InfoMarket-Windows.rar - osobny program, nie wymaga innych plików - wersja po kompilacji windows (tkinter)
