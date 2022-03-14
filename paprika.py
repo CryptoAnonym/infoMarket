@@ -13,7 +13,7 @@ if crypto.ok == True:
         print("")
         in_data = input("Wpisz tiker waluty (MENU - aby wrocic): ")
         
-        def papricaAll(crypt):          # wyszukiwarka coinpaprica
+        def papricaAll(crypt):          
             i = 0
             while i <= 100:
                 if i < 100:
@@ -68,7 +68,7 @@ if crypto.ok == True:
 else:
     print("Connect with COINPAPRIKA API ERROR!")
     
-def paprica_price_print(crypt):          # wyszukiwarka coinpaprica
+def paprica_price_print(crypt):         
             i = 0
             while i <= 100:
                 if i < 100:
@@ -103,7 +103,7 @@ def paprica_price_print(crypt):          # wyszukiwarka coinpaprica
                         #print("|"+ tiker + "|" + " "+ name + " = "+ str(pln)[0:8] +  " |PLN|")
                         break
 
-def paprica_price(crypt):          # wyszukiwarka coinpaprica
+def paprica_price(crypt):          
             i = 0
             while i <= 100:
                 if i < 100:
@@ -122,7 +122,7 @@ def paprica_price(crypt):          # wyszukiwarka coinpaprica
                         return price
                         break
 
-def paprica_price_pln(crypt):          # wyszukiwarka coinpaprica
+def paprica_price_pln(crypt):          
             i = 0
             while i <= 100:
                 if i < 100:
