@@ -9,7 +9,7 @@ The Application can:
 - view exchange rates according to the National Bank of Poland
 - browse the ethereum blockchain 
 - calculator KRYPTO-FIAT, KRYPTO-KRYPTO, FIAT-FIAT
-- current metal prices (1oz bullion coins) 
+- current metal prices (1oz bullion coins) [need Chrome Wersja 99.0.4844.51]
 
 Needs packages:
 REQUESTS, WEB3, SELENIUM (pip install "name package")
@@ -25,7 +25,7 @@ Aplikacja potrafi:
 - przeglądać kursy walut w/g NBP
 - przeglądać blockchain Ethereum
 - kalkulator KRYPTO-FIAT, KRYPTO-KRYPTO, FIAT-FIAT
-- aktualne ceny metali szlachetnych (monety bulionowe 1oz)
+- aktualne ceny metali szlachetnych (monety bulionowe 1oz) [wymaga Chrome Wersja 99.0.4844.51]
 
 Potrzebne pakiety:
 REQUESTS, WEB3, SELENIUM (pip install "nazwa pakietu")
