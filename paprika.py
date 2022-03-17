@@ -100,7 +100,7 @@ def paprica_price_print(crypt):
                         pln = usd_price * price
 
                         print("|"+ tiker + "|" + " "+ name + " = "+ str(price)[0:8] + " |USD|") 
-                        #print("|"+ tiker + "|" + " "+ name + " = "+ str(pln)[0:8] +  " |PLN|")
+                        print("|"+ tiker + "|" + " "+ name + " = "+ str(pln)[0:8] +  " |PLN|")
                         break
 
 def paprica_price(crypt):          
