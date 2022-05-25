@@ -1,5 +1,6 @@
-# infoMarket (upgrade 13.03.2022r)
+# infoMarket (upgrade 25.05.2022r)
 Quick view of crypto markets.
+Open infomarket.py 
 
 [EN]
 I am building an "infoMarket" application in python.
