@@ -1,4 +1,4 @@
-# infoMarket (upgrade 25.05.2022r)
+# infoMarket (upgrade 01.10.2022r)
 Quick view of crypto markets.
 Open infomarket.py 
 
@@ -10,7 +10,7 @@ The Application can:
 - view exchange rates according to the National Bank of Poland
 - browse the ethereum blockchain 
 - calculator KRYPTO-FIAT, KRYPTO-KRYPTO, FIAT-FIAT
-- current metal prices (1oz bullion coins) [need Chrome 102.0.5005.63]
+- current metal prices (1oz bullion coins) [need Chrome 102.0.5005.63] - [function suspended]
 
 Needs packages:
 REQUESTS, WEB3, SELENIUM (pip install "name package")
@@ -26,7 +26,7 @@ Aplikacja potrafi:
 - przeglądać kursy walut w/g NBP
 - przeglądać blockchain Ethereum
 - kalkulator KRYPTO-FIAT, KRYPTO-KRYPTO, FIAT-FIAT
-- aktualne ceny metali szlachetnych (monety bulionowe 1oz) [wymaga Chrome Wersja 102.0.5005.63]
+- aktualne ceny metali szlachetnych (monety bulionowe 1oz) [wymaga Chrome Wersja 102.0.5005.63] - [funkcja zawieszona] 
 
 Potrzebne pakiety:
 REQUESTS, WEB3, SELENIUM (pip install "nazwa pakietu")
