@@ -18,7 +18,6 @@ while True:
     info - ogolne informacje o rynku
     paprika - informacje o krypto z serwisu coinpaprica
     zonda - wyszukiwarka rynkow na gieldzie ZONDA
-    metals - ceny fizycznego metalu szlachetnego
     nbp - kursy walut z Narodowego Banku Polskiego
     eth - przeglad sieci Ethereum
     cal - kalkulator wymian (krypto-fiat, krypto-krypto, fiat-fiat)
@@ -45,8 +44,8 @@ while True:
     cal()
   elif action.upper() == "EXIT":
     break
-  elif action.upper() == "METALS":
-    metals()
+  #elif action.upper() == "METALS":
+    #metals()
   else:
     print("\nERROR! Bledna komenda. Sproboj jeszcze raz. ")
     
